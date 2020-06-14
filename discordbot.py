@@ -1,6 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
+import time
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -13,8 +14,7 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
     
-    
- #import timeしておく
+  
 @bot.command()
 async def ping(ctx):
   starttime = time.time()
