@@ -16,6 +16,15 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
+    
+    
+ #import timeしておく
+@bot.command()
+async def ping(ctx):
+  starttime = time.time()
+  msg = await ctx.send("測定中")
+  ping = time.time() - starttime
+  await msg.edit(content=str(ping))   
 
 
 bot.run(token)
