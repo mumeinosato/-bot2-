@@ -7,6 +7,14 @@ bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
+@bot.command()
+async def ping(ctx):
+  starttime = time.time()
+  msg = await ctx.send("測定中")
+  ping = time.time() - starttime
+  await msg.edit(content=str(ping))
+
+
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
@@ -14,13 +22,7 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
     
-  
-@bot.command()
-async def ping(ctx):
-  starttime = time.time()
-  msg = await ctx.send("測定中")
-  ping = time.time() - starttime
-  await msg.edit(content=str(ping))   
+ 
 
 
 bot.run(token)
