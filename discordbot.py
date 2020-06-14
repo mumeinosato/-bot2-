@@ -8,7 +8,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 
 @bot.command()
-async def popo(ctx):
+async def ping(ctx):
   starttime = time.time()
   msg = await ctx.send("測定中")
   ping = time.time() - starttime
