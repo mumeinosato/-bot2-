@@ -1,6 +1,7 @@
 import discord
+import os
 
-TOKEN = NzIxNjk2MjA3ODg1NDM0OTEw.Xund1g.gJO5UvhHePi3fPFm-IY0o34rcyE
+TOKEN = os.environ['DISCORD_BOT_TOKEN']
 
 
 client = discord.Client()
