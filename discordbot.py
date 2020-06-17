@@ -1,27 +1,25 @@
-from discord.ext import commands
-import os
-import time
-import tracebac
+import discord
 
-bot = commands.Bot(command_prefix='/')
-token = os.environ['DISCORD_BOT_TOKEN']
+TOKEN = NzIxNjk2MjA3ODg1NDM0OTEw.Xund1g.gJO5UvhHePi3fPFm-IY0o34rcyE
 
 
-@bot.event
-async def on_command_error(ctx, error):
-    orig_error = getattr(error, "original", error)
-    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-    await ctx.send(error_msg)
+client = discord.Client()
 
-    
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
-    
-    
-@bot.command()
-async def neko(ctx):
-    await ctx.send('ニャーん')
-    
+# 起動時に動作する処理
+@client.event
+async def on_ready():
+    # 起動したらターミナルにログイン通知が表示される
+    print('ログインしました')
 
-bot.run(token)
+# メッセージ受信時に動作する処理
+@client.event
+async def on_message(message):
+    # メッセージ送信者がBotだった場合は無視する
+    if message.author.bot:
+        return
+    # 「/neko」と発言したら「にゃーん」が返る処理
+    if message.content == '/neko':
+        await message.channel.send('にゃーん')
+
+# Botの起動とDiscordサーバーへの接続
+client.run(TOKEN)
