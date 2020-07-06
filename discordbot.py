@@ -1,8 +1,8 @@
 import discord
 import random
 import time
-import discord.ext
-from discord.exe import commands
+import discord.ext　
+from discord.ext import commands
 import os
 import traceback
 
