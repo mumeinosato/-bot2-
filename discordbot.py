@@ -45,7 +45,7 @@ async def about(ctx):
     embed = discord.Embed(title="このbotについて...", description="nakibot/ なきぼっと",color=0x77aa27)
     embed.add_field(name="製作者", value="Mumeinosato#7252",inline=True)
     embed.add_field(name="バージョン", value="Ver.1.α\n試験運用版",inline=False)
-    embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=729668738877620255&permissions=272103536&scope=bot)から招待できます",inline=False)
+    embed.add_field(name="このbotを招待", value="[こちら](https://discord.com/api/oauth2/authorize?client_id=734018142052941837&permissions=272103536&scope=bot)から招待できます",inline=False)
     await ctx.send(embed=embed)
 
 
