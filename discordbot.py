@@ -113,32 +113,32 @@ async def on_message(message):
         return
 
     elif message.content.startswith("こんにち"):
-        await message.channel.send("こん")
+        await message.channel.send("こんん")
 
     elif message.content.startswith("こんちゃ"):
-        await message.channel.send("こん")
+        await message.channel.send("こんん")
 
     elif message.content.startswith("ども"):
         await message.channel.send("どーもです")
 
     elif message.content.startswith("よろし"):
-        await message.channel.send("よろ")
+        await message.channel.send("よろろ")
 
     elif message.content.startswith("ただいま"):
-        await message.channel.send("おか")
+        await message.channel.send("おかえりなさいませ")
 
     elif message.content.startswith("飯落ち"):
         await message.channel.send("いってら")
 
     elif message.content.startswith("落ち"):
-        await message.channel.send("お疲れ～")
+        await message.channel.send("ばいばいきーん")
 
     elif message.content.startswith("ばい"):
-        await message.channel.send("ばーい")
+        await message.channel.send("ばいばいきーん")
 
     elif message.content.startswith("死ね"):
-        await message.channel.send("そういうのよくないよ")
-
+        await message.channel.send("黙れ")
+        
     elif message.content.startswith("おはよ"):
         await message.channel.send("おは")
         
@@ -148,9 +148,6 @@ async def on_message(message):
     elif message.content.startswith("初めまして"):
         await message.channel.send("初めまして！")
         
-    elif message.content.startswith("草"):
-        await message.channel.send("草")
-        
     elif message.content.startswith("無名の里"):
         await message.channel.send("無名の里(ムメイノサト)は、YouTuber、ゲーム開発者です。　是非YouTubeチャンネルを登録してね！https://www.youtube.com/channel/UCpb92184AP2Ffhyf7u2bD3w?view_as=subscriber")
         
@@ -159,12 +156,6 @@ async def on_message(message):
         
     elif message.content.startswith("オーナーのサイト"):
         await message.channel.send("無名の里のサイトです。https://mumeinosato.wixsite.com/lfkf")
-        
-    elif message.content.startswith("だろ"):
-        await message.channel.send("そうだよ")
-        
-    elif message.content.startswith("そうだよ"):
-        await message.channel.send("そうだよ")
        
     await bot.process_commands(message)#on_messageの定義内の最後にこれを入れないと定義したコマンドが動かなくなる。注意
 
